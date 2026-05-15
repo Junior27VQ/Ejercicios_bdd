@@ -15,3 +15,11 @@ insert into estudiantes values(3, 'Robert', 'Saul', 14, '3A','2026-05-12');
 insert into estudiantes values(4, 'Moni', 'Quijote', 16, '1B','2026-05-13');
 insert into estudiantes values(5, 'Rambo', 'Del', 13, '1A','2026-05-14');
 
+--Consultar Datos
+select * from estudiantes;
+select nombres, curso from estudiantes;
+select * from estudiantes where edad>18;
+select * from estudiantes where edad>18 and edad<25;
+select * from estudiantes where curso='Base de Datos';
+select * from estudiantes where fecha_registro>'2026-03-01';
+select * from estudiantes where fecha_registro between '2026-01-01' and '2026-04-30';
