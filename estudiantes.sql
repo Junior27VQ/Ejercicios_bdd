@@ -30,3 +30,9 @@ update estudiantes set edad=18 where curso='1B';
 update estudiantes set fecha_registro='2026-05-25' where id_estudiante=3;
 update estudiantes set curso='2B', nombres='Samira' where id_estudiante=4;
 update estudiantes set apellidos='Requejo' where id_estudiante=5;
+--DELETE Eliminar Datos
+delete from estudiantes where id_estudiante=1;
+delete from estudiantes where edad=14;
+delete from estudiantes where curso='1B';
+delete from estudiantes where fecha_registro='2026-05-25';
+delete from estudiantes where nombres='Samira';
