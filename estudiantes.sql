@@ -36,3 +36,6 @@ delete from estudiantes where edad=14;
 delete from estudiantes where curso='1B';
 delete from estudiantes where fecha_registro='2026-05-25';
 delete from estudiantes where nombres='Samira';
+
+--Modificacion de la tabla
+alter table estudiantes add column correo varchar(100);
