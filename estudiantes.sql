@@ -47,3 +47,6 @@ select * from estudiantes where fecha_registro<'2026-05-01';
 select * from estudiantes where fecha_registro between '2026-05-01' and '2026-05-30';
 select * from estudiantes where fecha_registro>'2026-03-15';
 select * from estudiantes where curso='Programacion';
+
+--Diferencia Entre PostgreSQL y MySQL
+drop table estudiantes;
