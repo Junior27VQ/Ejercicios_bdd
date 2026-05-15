@@ -9,11 +9,11 @@ create table estudiantes(
 );
 
 --Insercion de Datos
-insert into estudiantes values(1, 'Ramon', 'Mendez', 15, '3B','2026-05-10');
-insert into estudiantes values(2, 'Mari', 'Quevedo', 12, '2A','2026-05-11');
-insert into estudiantes values(3, 'Robert', 'Saul', 14, '3A','2026-05-12');
-insert into estudiantes values(4, 'Moni', 'Quijote', 16, '1B','2026-05-13');
-insert into estudiantes values(5, 'Rambo', 'Del', 13, '1A','2026-05-14');
+insert into estudiantes values(6, 'Marcos', 'Meneses', 20, 'POO','2026-05-10', 'marcos@gmail.com');
+insert into estudiantes values(7, 'San', 'Ruiz', 18, 'BDD','2026-05-11', 'sam@gmail.com');
+insert into estudiantes values(8, 'Mala', 'Lusifer', 15, 'PYTHON','2026-05-12', 'mala@gmail.com');
+insert into estudiantes values(9, 'Moli', 'Truejo', 16, 'JAVASCRIPT','2026-05-13', 'moli@gmail.com');
+insert into estudiantes values(10, 'Con', 'Kiel', 21, 'IA','2026-05-14', 'con@gmail.com');
 
 --Consultar Datos
 select * from estudiantes;
@@ -25,17 +25,25 @@ select * from estudiantes where fecha_registro>'2026-03-01';
 select * from estudiantes where fecha_registro between '2026-01-01' and '2026-04-30';
 
 --UPDATE Actualizar Datos
-update estudiantes set curso='1B' where id_estudiante=1;
-update estudiantes set edad=18 where curso='1B';
-update estudiantes set fecha_registro='2026-05-25' where id_estudiante=3;
-update estudiantes set curso='2B', nombres='Samira' where id_estudiante=4;
-update estudiantes set apellidos='Requejo' where id_estudiante=5;
+update estudiantes set curso='Programacion' where id_estudiante=8;
+update estudiantes set edad=18 where curso='IA';
+update estudiantes set fecha_registro='2026-05-20' where correo='con@gmail.com';
+update estudiantes set curso='BAse de datos', nombres='Samira' where fecha_registro='2026-05-20';
+update estudiantes set apellidos='Requejo' where id_estudiante=9;
 --DELETE Eliminar Datos
-delete from estudiantes where id_estudiante=1;
-delete from estudiantes where edad=14;
-delete from estudiantes where curso='1B';
+delete from estudiantes where id_estudiante=7;
+delete from estudiantes where edad=18;
+delete from estudiantes where curso='BAse de datos';
 delete from estudiantes where fecha_registro='2026-05-25';
-delete from estudiantes where nombres='Samira';
+delete from estudiantes where correo='con@gmail.com';
 
 --Modificacion de la tabla
 alter table estudiantes add column correo varchar(100);
+
+--Actualizacion de Scripts
+--Consultas con Fechas
+select * from estudiantes where fecha_registro>'2026-02-01';
+select * from estudiantes where fecha_registro<'2026-05-01';
+select * from estudiantes where fecha_registro between '2026-05-01' and '2026-05-30';
+select * from estudiantes where fecha_registro>'2026-03-15';
+select * from estudiantes where curso='Programacion';
